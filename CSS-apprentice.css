@@ -1,0 +1,103 @@
+/* Positioning (floats, inline, etc */
+.parent {
+  padding: 5px;
+  background-color: #00aaff;
+}
+
+.child {
+  padding: 5px;
+}
+
+.child-one {
+  background-color: rgb(116, 255, 116);
+  position: relative; /* Changes the position relative to the original position (static) */
+  top: 5px;
+  /* top: 5px; moves the element 5px down */
+  /* right: 5px; moves the element 5px left */
+  /* bottom: 5px; moves the element 5px up */
+}
+
+.child-two {
+  background-color: rgb(248, 117, 117);
+  /* position: absolute; */ /* positions to the coordinates of the nearest ancestor element that has an absolute position, and if an absolute positioned element has no positioned ancestors, it uses the document body  */
+  /* top: 0px;
+  left: 0px; 
+  ^positions the element to the 0px,0px coordinate of the body of the page */
+}
+
+/* Floats */
+.child-three {
+  background-color: rgb(255, 116, 232);
+}
+
+#building-image {
+  float: left;
+  margin: 10px;
+}
+
+/* Display */
+.parent-0 {
+}
+
+.parent-1 {
+  padding: 5px;
+  background-color: #00aaff;
+}
+
+.child-one-1 {
+  background-color: rgb(116, 255, 116);
+}
+
+.child-two-2 {
+  background-color: rgb(248, 117, 117);
+}
+
+.child-three-3 {
+  background-color: rgb(255, 116, 232);
+}
+
+/* Flexbox */
+.flexbox-container {
+  display: flex; /* changes the direction the content flows | sub-properties: row, row-reverse, column, column reverse  */
+  flex-direction: row;
+  justify-content: space-evenly; /* defines the alignment along the main axis */
+  flex-wrap: wrap; /* sets whether flex items are forced onto one line or can wrap onto multiple lines (can only be put in flex container or parent element) */
+  align-items: center; /* defines the alignment along the opposite axis of the flex-direction */
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+.flexbox-item-1 {
+  min-height: 100px;
+}
+
+.flexbox-item-2 {
+  min-height: 200px;
+}
+
+.flexbox-item-3 {
+  min-height: 300px;
+}
+
+.flexbox-cheat {
+  text-align: center;
+}
+
+/* Grid */
+.wrapper {
+  display: grid;
+  grid-template-columns: 70% 30%; /* specifies the number (and the widths) of columns in a grid layout */
+}
+
+.wrapper > div {
+  background: #eee;
+  padding: 1em;
+}
+.wrapper > div:nth-child(odd) {
+  background: #ddd;
+}
