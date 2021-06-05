@@ -62,7 +62,7 @@
   flex-direction: row;
   justify-content: space-evenly; /* defines the alignment along the main axis */
   flex-wrap: wrap; /* sets whether flex items are forced onto one line or can wrap onto multiple lines (can only be put in flex container or parent element) */
-  align-items: center; /* defines the alignment along the opposite axis of the flex-direction */
+  align-items: center; /* defines the alignment along the axis of the flex-direction */
 }
 
 .flexbox-item {
@@ -91,7 +91,8 @@
 /* Grid */
 .wrapper {
   display: grid;
-  grid-template-columns: 70% 30%; /* specifies the number (and the widths) of columns in a grid layout */
+  grid-template-columns: 70% 30%; /* specifies the number (and the widths) of columns in a grid layout. Number of columns/rows is the same number of units of measurenments given */
+  grid-gap: 16px; /* sets the gaps (gutters) between rows and/or columns */
 }
 
 .wrapper > div {
@@ -100,4 +101,31 @@
 }
 .wrapper > div:nth-child(odd) {
   background: #ddd;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* represents a fraction of the available space in the grid container | can also be typed as repeat(3, 1fr)  */
+  grid-gap: 16px;
+  grid-auto-rows: 100px; /* sets a size for the rows in a grid container */
+  grid-auto-rows: minmax(
+    100px,
+    auto
+  ); /* create grids that flex according to some parameters */
+}
+
+#wrapper > div {
+  background: #eee;
+  padding: 1em;
+}
+#wrapper > div:nth-child(odd) {
+  background: #ddd;
+}
+
+.grid-cheat {
+  text-align: center;
+}
+
+#external-css {
+  color: red;
 }
