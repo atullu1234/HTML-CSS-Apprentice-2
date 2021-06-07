@@ -134,7 +134,7 @@
   text-align: center;
 }
 
-/* Pseudo-classes */
+/* Pseudo Elements */
 .required::before {
   content: "";
   display: block;
@@ -149,4 +149,69 @@
 /* Shorthand properties */
 #shorthand {
   border: 10px solid blue; /* this is the shorthand property of a border that's 10px on each side, made of solid lines, and is blue */
+}
+
+/* Background images */
+.bg-image {
+  padding: 20em;
+  background-image: url(./lightning.jpg);
+  background-repeat: no-repeat;
+  outline: 2px solid black;
+  background-size: 30% 300px;
+  background-position: 10px 10px;
+}
+
+/* Specificity */
+h1 {
+  color: blue; /* Specificity code: 0, 0, 0, 1 */
+}
+
+.header {
+  color: red; /* Specificity code: 0, 0, 1, 0 * | if there are more than one class names, the last class name will be applied since they all have the same specificity code */
+}
+
+#header-id {
+  color: black; /* Specificity code: 0, 1, 0, 0 */
+}
+
+/* Inline styles are more specific than ids */
+/* ids are more specific than classes */
+/* classes are more specific than element names */
+/* the !important property overrides all of these rules */
+
+/* Display */
+#div-1 {
+  display: block; /* uses the entire width given to it; forces a new line above it and/or below it */
+  background-color: red;
+}
+
+#span-1 {
+  display: inline; /* take up the minimum amount of space possible */
+  background-color: cyan;
+}
+
+#span-2 {
+  background-color: purple;
+}
+
+#div-2 {
+  /* display: none; /* Removes the element as if it was never there */
+  background-color: green;
+}
+
+#img {
+  display: inline-block; /* exactly the same as an inline element, except you can edit the size */
+  width: 200px;
+  height: 200px;
+}
+
+/* flex and grid displays were already explained */
+
+/* Pseudo Classes */
+p:hover {
+  color: red;
+}
+
+div:hover {
+  color: blue;
 }
