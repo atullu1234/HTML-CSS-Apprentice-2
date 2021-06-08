@@ -93,7 +93,7 @@ Page 1       Page 2       Page 3       Page 4       Page 5
     </form>
     <br />
     <p>Target</p>
-    <form action="./destination.html" target="_blank">
+    <form action="./destination.html" target="_self">
       <!-- If the target is _self, the destination.html doc will open in the same page -->
       <fieldset>
         <legend>Target attribute</legend>
@@ -137,7 +137,6 @@ Page 1       Page 2       Page 3       Page 4       Page 5
     <p>Pattern validation</p>
     <form action="./destination.html" method="GET">
       <fieldset>
-        <!-- Ask mentor, below is not working -->
         <input
           type="text"
           pattern="(?=.*d)(?=.*[a-z])((?=.*[A-Z]).{5,}"

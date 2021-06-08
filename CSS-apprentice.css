@@ -11,7 +11,7 @@
 .child-one {
   background-color: rgb(116, 255, 116);
   position: relative; /* Changes the position relative to the original position (static) */
-  top: 5px;
+  left: 10px;
   /* top: 5px; moves the element 5px down */
   /* right: 5px; moves the element 5px left */
   /* bottom: 5px; moves the element 5px up */
@@ -19,10 +19,10 @@
 
 .child-two {
   background-color: rgb(248, 117, 117);
-  /* position: absolute; */ /* positions to the coordinates of the nearest ancestor element (in this case, 0px,0px coordinate of the body) that has an absolute position, and if an absolute positioned element has no positioned ancestors, it uses the document body  */
-  /* top: 0px;
-  left: 0px; 
-  ^positions the element to the 0px,0px coordinate of the body of the page */
+  position: absolute; /* positions to the coordinates of the nearest ancestor element (in this case, 0px,0px coordinate of the body) that has an absolute position, and if an absolute positioned element has no positioned ancestors, it uses the document body  */
+  top: 0px;
+  left: 0px;
+  /* ^positions the element to the 0px,0px coordinate of the body of the page */
 }
 
 /* Floats */
@@ -31,7 +31,7 @@
 }
 
 #building-image {
-  float: left;
+  float: right;
   margin: 10px;
 }
 
@@ -59,7 +59,7 @@
 /* Flexbox */
 .flexbox-container {
   display: flex; /* changes the direction the content flows | sub-properties: row, row-reverse, column, column reverse  */
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly; /* defines the alignment along the main axis */
   flex-wrap: wrap; /* sets whether flex items are forced onto one line or can wrap onto multiple lines (can only be put in flex container or parent element) */
   align-items: center; /* defines the alignment along the axis of the flex-direction */
@@ -126,7 +126,7 @@
 /* Grouping */
 .flexbox-cheat,
 .grid-cheat {
-  text-align: center;
+  text-align: left;
 }
 
 #inline-css,
@@ -143,7 +143,8 @@
   background-color: red;
 }
 .required::after {
-  content: "*Required";
+  content: "*Needed";
+  font-size: 10px;
 }
 
 /* Shorthand properties */
@@ -157,13 +158,13 @@
   background-image: url(./lightning.jpg);
   background-repeat: no-repeat;
   outline: 2px solid black;
-  background-size: 30% 300px;
+  background-size: 40% 300px;
   background-position: 10px 10px;
 }
 
 /* Specificity */
 h1 {
-  color: blue; /* Specificity code: 0, 0, 0, 1 */
+  color: blue !important; /* Specificity code: 0, 0, 0, 1 */
 }
 
 .header {
@@ -195,14 +196,14 @@ h1 {
 }
 
 #div-2 {
-  /* display: none; /* Removes the element as if it was never there */
+  display: none; /* Removes the element as if it was never there */
   background-color: green;
 }
 
 #img {
   display: inline-block; /* exactly the same as an inline element, except you can edit the size */
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
 }
 
 /* flex and grid displays were already explained */
